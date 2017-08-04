@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="684.0" prefWidth="1105.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appointments.AppointmentController">
+   <children>
+      <VBox layoutX="23.0" layoutY="23.0" prefHeight="274.0" prefWidth="320.0" style="-fx-background-color: #00A8FF;" styleClass="card-unpadded">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="320.0" spacing="20.0" style="-fx-background-color: #00A0F3;">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/appoint.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="20.0" prefWidth="233.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-font-size: 17px;" text="Appointment Statistics" />
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <VBox prefHeight="62.0" prefWidth="320.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="191.0" style="-fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold;" text="All Appointments">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <JFXProgressBar progress="1.0" />
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 15pt; -fx-text-fill: white;" text="123" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="58.0" prefWidth="320.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="181.0" style="-fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold;" text="Expired Appointments">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <JFXProgressBar progress="0.43" />
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 15pt; -fx-text-fill: white;" text="39" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="65.0" prefWidth="320.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="185.0" style="-fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold;" text="Pending Appointments">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <JFXProgressBar progress="0.37" />
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 15pt; -fx-text-fill: white;" text="45" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="23.0" layoutY="313.0" prefHeight="358.0" prefWidth="320.0" spacing="20.0" styleClass="card-unpadded">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="320.0" spacing="20.0" style="-fx-background-color: #00A65A;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/add.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="20.0" prefWidth="233.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-font-size: 17px;" text="Add New Appointment" />
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <JFXTextField labelFloat="true" maxWidth="320.0" minWidth="320.0" prefHeight="39.0" prefWidth="320.0" promptText="Patient names" />
+            <VBox prefHeight="58.0" prefWidth="270.0">
+               <children>
+                  <Label style="-fx-text-fill: #AAAAAA;" text="Doctor's Name" />
+                  <JFXComboBox prefHeight="30.0" prefWidth="295.0" />
+               </children>
+               <padding>
+                  <Insets left="15.0" right="10.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="97.0" prefHeight="58.0" prefWidth="270.0">
+               <children>
+                  <Label style="-fx-text-fill: #AAAAAA;" text="Appointment Date" />
+                  <JFXDatePicker prefHeight="19.0" prefWidth="276.0" />
+               </children>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="320.0">
+               <children>
+                  <JFXButton buttonType="RAISED" styleClass="blue-btn" text="SAVE" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="359.0" layoutY="23.0" prefHeight="646.0" prefWidth="734.0" styleClass="card-unpadded">
+         <children>
+            <TitledPane animated="false" layoutX="3.0" layoutY="6.0" prefHeight="342.0" prefWidth="724.0" styleClass="blue-titledPane" text="Appointments list">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="13.0" layoutY="14.0" prefHeight="292.0" prefWidth="700.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="3.0" layoutY="360.0" prefHeight="274.0" prefWidth="724.0" styleClass="blue-titledPane" text="Custom Search">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="248.0" prefWidth="722.0">
+                     <children>
+                        <TableView layoutX="247.0" layoutY="14.0" prefHeight="200.0" prefWidth="453.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="215.0" styleClass="card-unpadded">
+                           <children>
+                              <VBox layoutX="15.0" layoutY="14.0" prefHeight="64.0" prefWidth="181.0" spacing="10.0">
+                                 <children>
+                                    <Label prefHeight="19.0" prefWidth="178.0" text="Search criteria" />
+                                    <JFXCheckBox prefHeight="19.0" prefWidth="121.0" text="Doctor's name" />
+                                    <JFXCheckBox text="Patient's name" />
+                                 </children>
+                              </VBox>
+                              <TextField layoutX="9.0" layoutY="112.0" prefHeight="29.0" prefWidth="191.0" promptText="Search here" styleClass="search-box" />
+                              <JFXButton layoutX="64.0" layoutY="153.0" ripplerFill="#0ff75e" style="-fx-background-color: #AAAAAA;" text="Search..." />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

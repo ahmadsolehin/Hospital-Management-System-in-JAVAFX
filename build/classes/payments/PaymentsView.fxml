@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="684.0" prefWidth="1105.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="payments.PaymentsController">
+   <children>
+      <Label layoutX="30.0" layoutY="25.0" prefHeight="38.0" prefWidth="368.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Payment Methods" />
+      <VBox layoutX="30.0" layoutY="72.0" prefHeight="569.0" prefWidth="458.0" spacing="20.0">
+         <children>
+            <AnchorPane prefHeight="167.0" prefWidth="458.0" style="-fx-background-color: rgb(0, 166, 90);">
+               <children>
+                  <Pane layoutX="1.0" prefHeight="176.0" prefWidth="33.0" style="-fx-background-color: rgb(0, 150, 81);" />
+                  <Label layoutX="73.0" layoutY="8.0" prefHeight="31.0" prefWidth="313.0" styleClass="custom-white-title-label" text="M-Pesa Payment Procedure" />
+                  <VBox layoutX="103.0" layoutY="40.0" prefHeight="116.0" prefWidth="344.0" spacing="1.0">
+                     <children>
+                        <Separator prefWidth="200.0" />
+                        <Label prefHeight="20.0" prefWidth="316.0" styleClass="custom-white-label" text="1. Go to LIPA NA Mpesa option" />
+                        <Label prefHeight="20.0" prefWidth="316.0" styleClass="custom-white-label" text="2.Enter paybill number XXXXXX" />
+                        <Label prefHeight="20.0" prefWidth="316.0" styleClass="custom-white-label" text="3.Enter your bill amount" />
+                        <Label prefHeight="20.0" prefWidth="316.0" styleClass="custom-white-label" text="4.Confirm and complete the transaction" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="169.0" prefWidth="466.0" style="-fx-background-color: rgb(221, 75, 57);">
+               <children>
+                  <JFXRippler prefHeight="176.0" prefWidth="458.0" />
+                  <Pane layoutX="1.0" prefHeight="176.0" prefWidth="33.0" style="-fx-background-color: rgb(199, 68, 51);" />
+                  <Label layoutX="73.0" layoutY="8.0" prefHeight="31.0" prefWidth="313.0" styleClass="custom-white-title-label" text="Airtel Payment Procedure" />
+                  <VBox layoutX="103.0" layoutY="40.0" prefHeight="116.0" prefWidth="344.0" spacing="1.0">
+                     <children>
+                        <Separator prefWidth="200.0" />
+                        <Label prefHeight="20.0" prefWidth="316.0" styleClass="custom-white-label" text="1. Go to Bills option" />
+                        <Label prefHeight="20.0" prefWidth="316.0" styleClass="custom-white-label" text="2.Enter paybill number XXXXXX" />
+                        <Label prefHeight="20.0" prefWidth="316.0" styleClass="custom-white-label" text="3.Enter your bill amount" />
+                        <Label prefHeight="20.0" prefWidth="316.0" styleClass="custom-white-label" text="4.Confirm and complete the transaction" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="206.0" prefHeight="169.0" prefWidth="466.0" style="-fx-background-color: rgb(0, 173, 216);" styleClass="rgb(0, 192, 239)">
+               <children>
+                  <Pane layoutX="1.0" prefHeight="176.0" prefWidth="33.0" style="-fx-background-color: rgb(0, 149, 186);" />
+                  <Label layoutX="73.0" layoutY="8.0" prefHeight="31.0" prefWidth="313.0" styleClass="custom-white-title-label" text="Cash Payment Procedure" />
+                  <VBox layoutX="103.0" layoutY="40.0" prefHeight="116.0" prefWidth="344.0" spacing="1.0">
+                     <children>
+                        <Separator prefWidth="200.0" />
+                        <Label prefHeight="20.0" prefWidth="316.0" styleClass="custom-white-label" text="1. Give the hospital bill to the bursar" />
+                        <Label prefHeight="20.0" prefWidth="316.0" styleClass="custom-white-label" text="2.Ensure there is no over/underpayment" />
+                        <Label prefHeight="20.0" prefWidth="316.0" styleClass="custom-white-label" text="3.Claim for electronic receipt" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <VBox layoutX="530.0" layoutY="47.0" prefHeight="600.0" prefWidth="554.0" spacing="25.0" styleClass="card">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="527.0" style="-fx-font-size: 16pt; -fx-font-weight: bold;" text="Record Payment" textAlignment="CENTER" />
+            <JFXTextField focusColor="#00c0ef" labelFloat="true" maxWidth="524.0" minWidth="524.0" prefHeight="40.0" prefWidth="524.0" promptText="Patient's first name" unFocusColor="#656464">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField focusColor="#00c0ef" labelFloat="true" layoutX="10.0" layoutY="45.0" maxWidth="524.0" minWidth="524.0" prefHeight="40.0" prefWidth="524.0" promptText="patient's last name" unFocusColor="#656464">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField focusColor="#00c0ef" labelFloat="true" layoutX="10.0" layoutY="85.0" maxWidth="524.0" minWidth="524.0" prefHeight="40.0" prefWidth="524.0" promptText="Amount paid" unFocusColor="#656464">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <VBox>
+               <children>
+                  <Label text="Mode of Payment" textFill="#837f7f">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="48.0" prefWidth="524.0" spacing="10.0">
+                     <children>
+                        <JFXRadioButton selected="true" text="M-Pesa">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="cash" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton text="Airtel Money" toggleGroup="$cash" />
+                        <JFXRadioButton text="Cash" toggleGroup="$cash" />
+                        <JFXRadioButton text="Others" toggleGroup="$cash" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label prefHeight="33.0" prefWidth="230.0" text="Payment for :" textFill="#837f7f">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <JFXComboBox prefHeight="37.0" prefWidth="512.0">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </JFXComboBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="524.0">
+               <children>
+                  <JFXButton alignment="CENTER" contentDisplay="CENTER" prefHeight="61.0" prefWidth="258.0" ripplerFill="#e83030" styleClass="blue-btn" text="Record payment" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

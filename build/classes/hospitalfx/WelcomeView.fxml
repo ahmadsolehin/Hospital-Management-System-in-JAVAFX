@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane prefHeight="684.0" prefWidth="1105.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospitalfx.WelcomeController">
+         <children>
+            <VBox layoutX="20.0" layoutY="14.0" prefHeight="431.0" prefWidth="402.0" spacing="10.0" styleClass="card">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="206.0" styleClass="card-title" text="Hospital FX system" />
+                  <Separator prefHeight="2.0" prefWidth="384.0" />
+                  <Label prefHeight="107.0" prefWidth="370.0" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" textAlignment="CENTER" wrapText="true" />
+                  <Separator prefWidth="200.0" />
+                  <Label prefHeight="40.0" prefWidth="207.0" styleClass="card-title" text="Our Excellent Ratings" />
+                  <GridPane prefHeight="32.0" prefWidth="370.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="277.0" minWidth="10.0" prefWidth="277.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="93.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Rating max="7" prefHeight="32.0" prefWidth="245.0" rating="7.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <ProgressIndicator progress="1.0" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="20.0" layoutY="456.0" prefHeight="200.0" prefWidth="406.0" spacing="8.0" styleClass="card">
+               <children>
+                  <Label styleClass="card-title" text="Accepting all modes of payments" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <VBox prefHeight="130.0" prefWidth="110.0" styleClass="card-unpadded">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imgs/cash.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="28.0" prefWidth="109.0" text="Cash" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="130.0" prefWidth="110.0" styleClass="card-unpadded">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imgs/mpesa.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="28.0" prefWidth="109.0" text="M-Pesa" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="130.0" prefWidth="110.0" styleClass="card-unpadded">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imgs/airtel.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="28.0" prefWidth="109.0" text="Airtel-Money" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="689.0" layoutY="14.0" prefHeight="487.0" prefWidth="402.0" spacing="9.0" styleClass="card">
+               <children>
+                  <Label styleClass="card-title" text="User Profile" />
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/user.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <GridPane hgap="2.0" prefHeight="157.0" prefWidth="370.0" vgap="7.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.33331298828125" minWidth="10.0" prefWidth="150.33331298828125" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.66668701171875" minWidth="10.0" prefWidth="219.66668701171875" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="User Email" GridPane.rowIndex="1" />
+                        <Label text="Display Name" />
+                        <Label text="Account Type" GridPane.rowIndex="2" />
+                        <Label text="Created On:" GridPane.rowIndex="3" />
+                        <Label text="Contact Number" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtLoggedUser" editable="false" opacity="0.95" style="-fx-text-fill: #AAAAAA;" text="Guest User" GridPane.columnIndex="1" />
+                        <TextField editable="false" opacity="0.95" style="-fx-text-fill: #AAAAAA;" text="user@system.com" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField editable="false" opacity="0.95" style="-fx-text-fill: #AAAAAA;" text="User" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField editable="false" opacity="0.95" style="-fx-text-fill: #AAAAAA;" text="23/08/2012 1340hrs" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField editable="false" opacity="0.95" style="-fx-text-fill: #AAAAAA;" text="+2553425543" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <Separator prefHeight="0.0" prefWidth="370.0" />
+                  <HBox alignment="CENTER_RIGHT" prefHeight="56.0" prefWidth="370.0" spacing="20.0">
+                     <children>
+                        <JFXButton style="-fx-background-color: #F3F3F3;" text="Edit Profile" />
+                        <JFXButton fx:id="btnLogOut" onAction="#logOut" style="-fx-background-color: #F3F3F3;" text="Log out" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="439.0" layoutY="14.0" prefHeight="490.0" prefWidth="232.0" spacing="5.0" styleClass="card">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="201.0" text="AUTOMATED SERVICES" />
+                  <Separator prefWidth="200.0" />
+                  <JFXCheckBox allowIndeterminate="true" checkedColor="#f51ba9" indeterminate="true" prefHeight="35.0" prefWidth="200.0" selected="true" text="Appointments" />
+                  <JFXCheckBox allowIndeterminate="true" checkedColor="#f51ba9" indeterminate="true" layoutX="26.0" layoutY="64.0" prefHeight="35.0" prefWidth="200.0" selected="true" text="Automated Contacts" />
+                  <JFXCheckBox allowIndeterminate="true" checkedColor="#f51ba9" indeterminate="true" layoutX="26.0" layoutY="99.0" prefHeight="35.0" prefWidth="200.0" selected="true" text="Ease payments" />
+                  <JFXCheckBox allowIndeterminate="true" checkedColor="#f51ba9" indeterminate="true" layoutX="26.0" layoutY="134.0" prefHeight="35.0" prefWidth="200.0" selected="true" text="Online Synchronization" />
+                  <JFXCheckBox allowIndeterminate="true" checkedColor="#f51ba9" indeterminate="true" layoutX="26.0" layoutY="169.0" prefHeight="35.0" prefWidth="200.0" selected="true" text="Visualizations" />
+                  <JFXCheckBox allowIndeterminate="true" checkedColor="#f51ba9" indeterminate="true" layoutX="26.0" layoutY="204.0" prefHeight="35.0" prefWidth="200.0" selected="true" text="Push Notifications" />
+                  <JFXCheckBox allowIndeterminate="true" checkedColor="#f51ba9" indeterminate="true" layoutX="26.0" layoutY="239.0" prefHeight="35.0" prefWidth="200.0" selected="true" text="Appointments" />
+                  <JFXCheckBox allowIndeterminate="true" checkedColor="#f51ba9" indeterminate="true" layoutX="26.0" layoutY="274.0" prefHeight="35.0" prefWidth="200.0" selected="true" text="Appointments" />
+               </children>
+            </VBox>
+            <HBox fillHeight="false" layoutX="442.0" layoutY="536.0" prefHeight="127.0" prefWidth="649.0" spacing="30.0">
+               <children>
+                  <VBox prefHeight="124.0" prefWidth="142.0" style="-fx-background-color: rgb(0, 192, 239);" styleClass="card">
+                     <children>
+                        <Label prefHeight="57.0" prefWidth="141.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 36;" text="24" />
+                        <Label prefHeight="43.0" prefWidth="110.0" style="-fx-text-fill: white; -fx-font-family: roboto; -fx-font-weight: bold; -fx-font-size: 16;" text="Doctors" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="124.0" prefWidth="142.0" style="-fx-background-color: rgb(221, 75, 57);" styleClass="card">
+                     <children>
+                        <Label prefHeight="57.0" prefWidth="141.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 36;" text="150" />
+                        <Label prefHeight="36.0" prefWidth="110.0" style="-fx-text-fill: white; -fx-font-family: roboto; -fx-font-weight: bold; -fx-font-size: 16;" text="Appointments" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="182.0" layoutY="10.0" prefHeight="124.0" prefWidth="142.0" style="-fx-background-color: rgb(0, 166, 90);" styleClass="card">
+                     <children>
+                        <Label prefHeight="57.0" prefWidth="134.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 36;" text="99 %" />
+                        <Label prefHeight="36.0" prefWidth="110.0" style="-fx-text-fill: white; -fx-font-family: roboto; -fx-font-weight: bold; -fx-font-size: 16;" text="Efficiency" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="354.0" layoutY="10.0" prefHeight="124.0" prefWidth="142.0" style="-fx-background-color: rgb(243, 156, 18);" styleClass="card">
+                     <children>
+                        <Label prefHeight="57.0" prefWidth="134.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 36;" text="100 %" />
+                        <Label prefHeight="36.0" prefWidth="110.0" style="-fx-text-fill: white; -fx-font-family: roboto; -fx-font-weight: bold; -fx-font-size: 16;" text="Commitment" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>

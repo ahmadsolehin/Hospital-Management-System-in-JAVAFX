@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="684.0" prefWidth="1105.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doctors.DoctorsController">
+   <children>
+      <JFXTabPane layoutX="138.0" layoutY="100.0" prefHeight="684.0" prefWidth="1105.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="MANAGE DOCOTRS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="23.0" layoutY="33.0" prefHeight="135.0" prefWidth="1068.0" spacing="30.0">
+                           <children>
+                              <AnchorPane prefHeight="110.0" prefWidth="393.0" style="-fx-background-color: #00ADD8;" styleClass="card-unpadded">
+                                 <children>
+                                    <Pane layoutX="-1.0" prefHeight="141.0" prefWidth="23.0" style="-fx-background-color: #007390;" />
+                                    <ImageView fitHeight="97.0" fitWidth="124.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imgs/doctor.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="182.0" layoutY="14.0" prefHeight="67.0" prefWidth="89.0" styleClass="custom-white-title-label" text="16" />
+                                    <Label layoutX="182.0" layoutY="76.0" prefHeight="31.0" prefWidth="210.0" styleClass="custom-white-label" text="Registered doctors" />
+                                    <Label layoutX="182.0" layoutY="107.0" prefHeight="33.0" prefWidth="210.0" styleClass="custom-white-label" text="We need you." />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="166.0" prefWidth="393.0" style="-fx-background-color: #DD4B39;" styleClass="card-unpadded">
+                                 <children>
+                                    <Pane layoutX="-1.0" prefHeight="166.0" prefWidth="23.0" style="-fx-background-color: #C74433;" />
+                                    <ImageView fitHeight="125.0" fitWidth="124.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imgs/Appointment.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="209.0" layoutY="14.0" prefHeight="67.0" prefWidth="89.0" styleClass="custom-white-title-label" text="57 of 100 " />
+                                    <Label layoutX="182.0" layoutY="76.0" prefHeight="31.0" prefWidth="210.0" styleClass="custom-white-label" text="Unattended appointments" />
+                                    <JFXProgressBar layoutX="179.0" layoutY="120.0" progress="0.52" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="157.0" prefWidth="205.0" style="-fx-background-color: #F39C12;" styleClass="card">
+                                 <children>
+                                    <VBox layoutX="14.0" layoutY="14.0" prefHeight="85.0" prefWidth="159.0">
+                                       <children>
+                                          <Label prefHeight="31.0" prefWidth="153.0" styleClass="custom-white-title-label" text="TODAY" />
+                                          <Label prefHeight="20.0" prefWidth="152.0" styleClass="custom-white-title-label" text="Monday" />
+                                          <Label prefHeight="20.0" prefWidth="151.0" styleClass="custom-white-title-label" text="12/07/2017" />
+                                       </children>
+                                    </VBox>
+                                    <ImageView fitHeight="31.0" fitWidth="50.0" layoutX="143.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imgs/Copyright.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <AnchorPane layoutX="23.0" layoutY="224.0" prefHeight="413.0" prefWidth="1057.0" styleClass="card-unpadded">
+                           <children>
+                              <VBox layoutX="20.0" layoutY="14.0" prefHeight="380.0" prefWidth="415.0" spacing="10.0">
+                                 <children>
+                                    <JFXTextField focusColor="#00add8" labelFloat="true" promptText="First Name" unFocusColor="#868282" />
+                                    <JFXTextField focusColor="#00add8" labelFloat="true" layoutX="10.0" layoutY="10.0" promptText="Last Name" unFocusColor="#868282" />
+                                    <JFXTextField focusColor="#00add8" labelFloat="true" layoutX="10.0" layoutY="46.0" promptText="Email address" unFocusColor="#868282" />
+                                    <JFXTextField focusColor="#00add8" labelFloat="true" layoutX="10.0" layoutY="82.0" promptText="Phone Number" unFocusColor="#868282" />
+                                    <JFXTextField focusColor="#00add8" labelFloat="true" layoutX="10.0" layoutY="118.0" promptText="Identity Number" unFocusColor="#868282" />
+                                    <JFXTextArea maxWidth="404.0" minWidth="404.0" prefHeight="98.0" prefWidth="404.0" promptText="Additional Information" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="525.0" layoutY="17.0" prefHeight="376.0" prefWidth="511.0" spacing="10.0">
+                                 <children>
+                                    <VBox prefHeight="82.0" prefWidth="541.0">
+                                       <children>
+                                          <Label style="-fx-text-fill: #868282;" text="Level of Specialization" />
+                                          <JFXComboBox fx:id="comboSpecialization" prefHeight="40.0" prefWidth="494.0">
+                                             <VBox.margin>
+                                                <Insets left="100.0" />
+                                             </VBox.margin>
+                                          </JFXComboBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="82.0" prefWidth="541.0">
+                                       <children>
+                                          <Label prefHeight="20.0" prefWidth="112.0" style="-fx-text-fill: #868282;" text="Department" />
+                                          <JFXComboBox fx:id="comboDepartment" prefHeight="40.0" prefWidth="499.0">
+                                             <VBox.margin>
+                                                <Insets left="100.0" />
+                                             </VBox.margin>
+                                          </JFXComboBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="10.0" layoutY="92.0" prefHeight="82.0" prefWidth="541.0">
+                                       <children>
+                                          <Label prefHeight="20.0" prefWidth="222.0" style="-fx-text-fill: #868282;" text="Taking Appointments" />
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                             <children>
+                                                <JFXRadioButton selected="true" text="YES">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="q" />
+                                                   </toggleGroup></JFXRadioButton>
+                                                <JFXRadioButton layoutX="10.0" layoutY="10.0" text="NO" toggleGroup="$q" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="100.0" right="20.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator prefWidth="200.0" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="77.0" prefWidth="511.0" spacing="20.0">
+                                       <children>
+                                          <JFXButton styleClass="cancel-button" text="Cancel" />
+                                          <JFXButton prefHeight="27.0" prefWidth="78.0" styleClass="green-btn" text="Edit" />
+                                          <JFXButton layoutX="72.0" layoutY="10.0" prefHeight="37.0" prefWidth="100.0" styleClass="blue-btn" text="Save" />
+                                       </children>
+                                       <padding>
+                                          <Insets right="20.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="DETAILS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.6173228346456693" layoutX="16.0" layoutY="6.0" orientation="VERTICAL" prefHeight="649.0" prefWidth="1105.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="388.0" prefWidth="1103.0">
+                                 <children>
+                                    <TextField layoutX="787.0" layoutY="14.0" prefHeight="30.0" prefWidth="302.0" promptText="Search doctor by name" styleClass="search-box" />
+                                    <TableView layoutX="11.0" layoutY="53.0" prefHeight="326.0" prefWidth="1080.0">
+                                      <columns>
+                                        <TableColumn editable="false" prefWidth="389.0" text="C1" />
+                                          <TableColumn editable="false" prefWidth="168.0" sortable="false" text="C2" />
+                                          <TableColumn editable="false" prefWidth="171.0" sortable="false" text="C2" />
+                                          <TableColumn editable="false" prefWidth="250.0" sortable="false" text="C2" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="240.0" prefWidth="1103.0">
+                                 <children>
+                                    <HBox layoutX="30.0" layoutY="14.0" prefHeight="210.0" prefWidth="1043.0" spacing="30.0">
+                                       <children>
+                                          <GridPane prefHeight="219.0" prefWidth="493.0" styleClass="card">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="106.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.0" minWidth="10.0" prefWidth="321.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Personal Details" />
+                                                <Label prefHeight="20.0" prefWidth="83.0" text="Contacts" GridPane.rowIndex="4" />
+                                                <Label prefHeight="20.0" prefWidth="300.0" styleClass="blue-label" text="ID No 30229182" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Label prefHeight="20.0" prefWidth="300.0" styleClass="blue-label" text="Doctor" GridPane.columnIndex="1" />
+                                                <Label prefHeight="20.0" prefWidth="300.0" styleClass="blue-label" text="Daniel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label prefHeight="20.0" prefWidth="300.0" styleClass="blue-label" text="Mungatana" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label prefHeight="20.0" prefWidth="300.0" styleClass="green-label" text="0717160344" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Label prefHeight="20.0" prefWidth="300.0" styleClass="green-label" text="danmlayah@gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                             </children>
+                                          </GridPane>
+                                          <GridPane prefHeight="219.0" prefWidth="520.0" styleClass="card">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="239.0" minWidth="10.0" prefWidth="186.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="302.0" minWidth="10.0" prefWidth="302.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Speciality" />
+                                                <Label text="Taking Appointments ?" GridPane.rowIndex="2" />
+                                                <Label text="Pending Appointments" GridPane.rowIndex="3" />
+                                                <Label prefHeight="20.0" prefWidth="280.0" styleClass="yellow-label" text="Cardiologist" GridPane.columnIndex="1" />
+                                                <Label prefHeight="20.0" prefWidth="280.0" styleClass="yellow-label" text="Department of Cardiology" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label prefHeight="20.0" prefWidth="279.0" styleClass="red-label" text="YES" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <children>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="98.0" style="-fx-font-weight: bold;" styleClass="green-label" text="12" />
+                                                      <JFXButton buttonType="RAISED" prefHeight="30.0" prefWidth="99.0" style="-fx-background-color: rgb(0, 166, 90); -fx-text-fill: white; -fx-font-size: 14; -fx-font-weight: bold;" text="View" />
+                                                   </children>
+                                                </HBox>
+                                                <JFXButton buttonType="RAISED" ripplerFill="#53eb11" styleClass="blue-btn" text="Edit Info" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

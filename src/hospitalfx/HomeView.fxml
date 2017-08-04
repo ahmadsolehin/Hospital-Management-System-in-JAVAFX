@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXPopup?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospitalfx.HomeViewController">
+   <children>
+      <JFXToolbar layoutY="-1.0" prefHeight="0.0" prefWidth="1200.0" styleClass="jfx-toolbar" stylesheets="@../styles/styles.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <left>
+            <JFXHamburger fx:id="hamburger" styleClass="jfx-hamburger" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <Label fx:id="txtCurrentWindow" prefHeight="40.0" prefWidth="199.0" style="-fx-text-fill: white; -fx-text-alignment: center; -fx-font-weight: bold;" styleClass="card-title" text="HOSPITAL FX" BorderPane.alignment="CENTER" />
+         </center>
+         <right>
+            
+         </right>
+      </JFXToolbar>
+      <AnchorPane fx:id="holderPane" layoutX="86.0" layoutY="51.0" prefHeight="684.0" prefWidth="1105.0" />
+          
+        
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="200.0" layoutX="-1.0" layoutY="40.0" prefHeight="684.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
