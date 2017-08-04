@@ -1,5 +1,7 @@
 # Hospital-Management-System-in-JAVAFX
 <li>This is a simple prototype hospital system implemented in Javafx using material design principles. </li>
+<li> Utilised several material design components like navigation drawer,card,buttons,ripple effects ,tab panes and more </li>
+
 
 ## screenshot
 
