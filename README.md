@@ -1,4 +1,5 @@
 # Hospital-Management-System-in-JAVAFX
+This is a simple prototype hospital system implemented in Javafx using material design principles.
 
 ## screenshot
 
